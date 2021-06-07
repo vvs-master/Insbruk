@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.site_header {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    transition: .9s;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #2A3D8F;
+    font-size: 30px;
+}
+
+.nav_link:hover {
+    color: #3893cc;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 75px;
+    height: 70px;
+}
+
+.header_nav {
+    flex-grow: 1;
+}
+
+.main_slider {
+    background-image: url(img/innsbruck1.png);
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    width: 1200px;
+    font-size: 40px;
+}
+
+h2 {
+    color: #2A3D8F;
+}
+
+article {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marketing {
+    background-image: url(img/skier.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about_list {
+    list-style-type: none;
+}
+
+.about_list li:before {
+    content: "✓";
+    margin-right: 3px;
+}
+
+.about_list li:hover:before {
+    content: "";
+}
+
+.marketing_link {
+    align-self: flex-end;
+    text-decoration: none;
+    color: rgb(129, 129, 129);
+    background: rgb(238, 238, 238);
+    opacity: 0.7;
+}
+
+.marketing_link:hover {
+    align-self: flex-end;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background: rgb(94, 94, 94);
+}
+
+.img_about-weather {
+    width: 100%;
+}
+
+.figcaption_about-weather {
+    text-align: center;
+    background: rgb(124, 124, 124);
+    color: rgb(255, 255, 255);
+    padding: 5px 0;
+}
+
+.gallery-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.gallery {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: center;
+    background: #B5D4C5;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.gallery-p2 {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 35px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.map {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.transfer {
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.transfer th, td {
+    border: 1px solid #000;
+    width: 25%;
+}
+
+.transfer_thead {
+    background: rgb(32, 46, 92);
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    display: flex;
+    background: #B5D4C5;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.twitter {
+    margin-right: 5px;
+}
+
+.fb {
+    margin-right: 5px;
+}
+
+.gallery-item img {
+    width: 100%;
+}
+
+td span {
+    display: none;
+}
+
+#menu_toggle {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+}
+
+.hamburger_btn {
+    z-index: 2;
+}
+
+@media (max-width: 767px) {
+    .site_header {
+        width: 100%;
+    }
+    h1 {
+        margin-left: 10px;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+    article {
+        width: 100%;
+    }
+    .gallery-item {
+        flex-direction: column;
+    }
+    .gallery {
+        width: 100%;
+    }
+    .map {
+        width: 100%;
+    }
+    .gallery-p2 {
+        order: 1;
+    }
+    body {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav_list {
+        display: block;
+        padding: 0;
+    }
+    .site_header {
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(221, 221, 221, 0.493);
+    }
+    .nav_list li {
+        border-bottom: 1px solid rgba(139, 139, 139, 0.534);
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .header_nav {
+        width: 100%;
+    }
+    .wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+    .marketing {
+        width: 100%;
+        background-position: center right;
+    }
+    .transfer_thead {
+        display: none;
+    }
+    tr {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+    td {
+        width: 45%;
+    }
+    td span {
+        display: block;
+        background: rgba(0, 38, 163, 0.336);
+        color: dimgray;
+        font-size: 10px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hamburger_btn {
+        height: 26px;
+        width: 26px;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        cursor: pointer;
+        left: 25px;
+        top: 10px;
+    }
+    .hamburger_line, .hamburger_line:after, .hamburger_line:before {
+        display: block;
+        height: 2px;
+        background-color: grey;
+        position: absolute;
+        width: 100%;
+        transition: 1s;
+    }
+    .hamburger_line:after {
+        content: "";
+        top: 8px;
+    }
+    .hamburger_line:before {
+        content: "";
+        top: -8px;
+    }
+    #menu_toggle:checked~.site_header {
+        left: 0;
+    }
+    #menu_toggle:checked+.hamburger_btn>.hamburger_line:after {
+        transform: rotate(90deg);
+        top: 0;
+    }
+    #menu_toggle:checked+.hamburger_btn>.hamburger_line {
+        transform: rotate(45deg);
+    }
+    #menu_toggle:checked+.hamburger_btn>.hamburger_line:before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+}
